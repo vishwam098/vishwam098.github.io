@@ -472,22 +472,55 @@ color: white; /* White text for copyright */
 
 /*Responsiveness*/
 /* Show the menu icon and hide the navbar on smaller screens */
-@media (max-width: 768px) {
-  .navbar {
+@media(max-width: 1285px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
     position: absolute;
     top: 100%;
-    right: -100%; /* Off-screen initially */
-    flex-direction: column;
-    width: 100%;
-    background: var(--second-bg-color);
-    transition: right 0.3s ease-in-out;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-bottom-left-radius: 2rem;
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
   }
-
-  .navbar.active {
-    right: 0; /* Bring it on-screen when active */
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
   }
+  .navbar.active{
+    display: block;
+  }
+  .gradient-btn{
+    display: none;
+  }
+  .home{
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+  .home-content{
+    align-items: center;
+    text-align: center;
+  }
+  .home-img img{
+    width:56vw;
+  }
+  .about{
+    flex-direction: column-reverse;
+    text-align: center;
 
-  #menu-icon {
-    display: block; /* Show the menu icon on smaller screens */
+  }
+  .about h2{
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .about img{
+    width: 52vw;
   }
 }
