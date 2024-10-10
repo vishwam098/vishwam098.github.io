@@ -524,3 +524,67 @@ color: white; /* White text for copyright */
     width: 52vw;
   }
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1.5rem 5%;
+  }
+
+  #menu-icon {
+    display: block;
+    font-size: 3rem;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 270px;
+    background: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .navbar.active {
+    right: 0;
+  }
+
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 769px) {
+  #menu-icon {
+    display: none;
+  }
+
+  .navbar {
+    position: static;
+    width: auto;
+    background: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar a {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+  }
+
+  .navbar a:hover,
+  .navbar a.active {
+    color: var(--main-color);
+  }
+}
